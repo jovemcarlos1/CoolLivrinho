@@ -20,3 +20,32 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.filter-item {
+    margin-right: 10px
+}
+
+.btn-custom {
+    border: none;
+    max-height: 30px;
+    text-decoration: none;
+}
+
+.btn-custom-border-rounded {
+    border-radius: 15px;
+    border: none;
+}
+
+.btn-custom-bg-light {
+    background-color: #E8EDF2;
+    color: #000000;
+}
+
+.btn-custom-bg-blue {
+    background-color: #308CE8;
+    color: white;
+}
+
+.btn-custom-text {
+    padding: 5px;
+}

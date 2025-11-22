@@ -3,19 +3,49 @@
 @{
     ViewData["Title"] = "Index";
 }
+<div class="d-flex justify-content-between align-items-center">
+    <h1 class="inter-bold">Sua Biblioteca</h1>
+    <a asp-action="Create" class="inter-bold btn-sm btn-custom btn-custom-bg-blue">Novo Livro</a>
+</div>
+<hr />
+@* <p class="inter-bold">Filtros</p>
+<div class="d-flex">
+    <div class="filter-item dropdown">
+        <button class="inter-medium btn-sm btn-custom btn-custom-border-rounded dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <span class="btn-custom-text">Categorias</span>
+        </button>
+        <ul class="dropdown-menu">
+            @foreach (var item in Model.GroupBy(x => x.Categoria.CategoriaId).Select(x => x.First()))
+            {
+                <li><a class="dropdown-item" href="#">@Html.DisplayFor(modelItem => item.Categoria.Nome)</a></li>
+            }
+        </ul>
+    </div>
+    <div class="filter-item dropdown">
+        <button class="inter-medium btn-sm btn-custom btn-custom-border-rounded dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <span class="btn-custom-text">Autores</span>
 
-<h1>Index</h1>
-
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<div class="container d-flex justify-content-around flex-wrap">
+        </button>
+        <ul class="dropdown-menu">
+            @foreach (var item in Model.GroupBy(x => x.Autor.AutorId).Select(x => x.First()))
+            {
+                <li><a class="dropdown-item" href="#">@Html.DisplayFor(modelItem => item.Autor.Nome)</a></li>
+            }
+        </ul>
+    </div> *@
+@*     <div class="filter-item">
+        <a class="inter-medium btn-sm btn-custom-border-rounded btn-custom btn-custom-bg-light" asp-action="Index">
+            <span class="btn-custom-text">Todos os livros</span>
+        </a>
+    </div>
+</div> *@
+<div class="container d-flex justify-content-around flex-wrap pt-4">
 
     @foreach (var item in Model)
     {
         <div class="p-2" style="width: 9rem;">
             <div class="card-img-top" style="width: 100%; height: 11rem;">
-                <img  style="width: 100%; height:100%; object-fit: cover; object-position: center;" src="https://nivalmix.vteximg.com.br/arquivos/ids/192923-1000-1000/livro-o-pequeno-principe-principis.jpg?v=637592871872770000" alt="...">
+                <img style="width: 100%; height:100%; object-fit: cover; object-position: center;" src="https://nivalmix.vteximg.com.br/arquivos/ids/192923-1000-1000/livro-o-pequeno-principe-principis.jpg?v=637592871872770000" alt="...">
             </div>
             <div class="m-0">
                 <h5 class="inter-medium m-0">
@@ -33,46 +63,3 @@
         </div>
     }
 </div>
-@* <table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Titulo)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Autor)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Categoria)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.AnoLancamento)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Titulo)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Autor.AutorId)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Categoria.CategoriaId)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.AnoLancamento)
-                </td>
-                <td>
-                    <a asp-action="Edit" asp-route-id="@item.LivroId">Edit</a> |
-                    <a asp-action="Details" asp-route-id="@item.LivroId">Details</a> |
-                    <a asp-action="Delete" asp-route-id="@item.LivroId">Delete</a>
-                </td>
-            </tr>
-        }
-    </tbody>
-</table> *@
