@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
-namespace CoolLivrinho.Data
+namespace Bibliotech.Data
 {
     public class LivroContext : DbContext
     {

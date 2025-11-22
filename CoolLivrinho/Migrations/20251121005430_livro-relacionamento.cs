@@ -2,7 +2,7 @@
 
 #nullable disable
 
-namespace CoolLivrinho.Migrations
+namespace Bibliotech.Migrations
 {
     /// <inheritdoc />
     public partial class livrorelacionamento : Migration

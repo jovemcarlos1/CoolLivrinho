@@ -5,10 +5,10 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using CoolLivrinho.Data;
-using CoolLivrinho.Models;
+using Bibliotech.Data;
+using Bibliotech.Models;
 
-namespace CoolLivrinho.Controllers
+namespace Bibliotech.Controllers
 {
     public class CategoriaController : Controller
     {

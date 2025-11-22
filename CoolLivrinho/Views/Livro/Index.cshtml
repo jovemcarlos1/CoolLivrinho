@@ -1,4 +1,4 @@
-﻿@model IEnumerable<CoolLivrinho.Models.Livro>
+﻿@model IEnumerable<Bibliotech.Models.Livro>
 
 @{
     ViewData["Title"] = "Index";
@@ -9,6 +9,26 @@
 <p>
     <a asp-action="Create">Create New</a>
 </p>
+<div class="container d-flex justify-content-around">
+
+    @foreach (var item in Model)
+    {
+        <div class="card" style="width: 10rem;">
+            <img src="https://livrariascuritiba.vteximg.com.br/arquivos/ids/2197294-1000-1000/LV526509.jpg?v=638678777078200000" class="card-img-top" alt="...">
+            <div class="card-body ps-4">
+                <h5 class="card-title inter-medium">
+                    @Html.DisplayFor(modelItem => item.Titulo)
+                    </h5>
+                <p class="card-text inter-regular">
+                    @Html.DisplayFor(modelItem => item.Autor.Nome)
+                </p>
+                <p class="card-text inter-light"><small class="text-body-secondary">
+                        @Html.DisplayFor(modelItem => item.AnoLancamento)
+                </small></p>
+            </div>
+        </div>
+    }
+</div>
 <table class="table">
     <thead>
         <tr>
@@ -28,26 +48,27 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Titulo)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Autor.AutorId)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Categoria.CategoriaId)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.AnoLancamento)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.LivroId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.LivroId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.LivroId">Delete</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Titulo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Autor.AutorId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Categoria.CategoriaId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AnoLancamento)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.LivroId">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.LivroId">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.LivroId">Delete</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>

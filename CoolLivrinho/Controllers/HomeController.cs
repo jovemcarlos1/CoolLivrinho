@@ -1,8 +1,8 @@
 using System.Diagnostics;
-using CoolLivrinho.Models;
+using Bibliotech.Models;
 using Microsoft.AspNetCore.Mvc;
 
-namespace CoolLivrinho.Controllers
+namespace Bibliotech.Controllers
 {
     public class HomeController : Controller
     {

@@ -1,4 +1,4 @@
-﻿namespace CoolLivrinho.Models
+﻿namespace Bibliotech.Models
 {
     public class Livro
     {
