@@ -20,3 +20,54 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.filter-item {
+    margin-right: 10px
+}
+
+.anchor-custom {
+    text-decoration: none;
+    color: inherit;
+}
+
+.card-custom {
+    width: 9rem;
+}
+
+.card-img-top-custom {
+    width: 100%;
+    height: 11rem;
+}
+
+    .card-img-top-custom img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+
+.btn-custom {
+    border: none;
+    max-height: 30px;
+    text-decoration: none;
+}
+
+.btn-custom-border-rounded {
+    border-radius: 15px;
+    border: none;
+}
+
+.btn-custom-bg-light {
+    background-color: #E8EDF2;
+    color: #000000;
+}
+
+.btn-custom-bg-blue {
+    background-color: #308CE8;
+    color: white;
+}
+
+.btn-custom-text {
+    padding: 5px;
+}
