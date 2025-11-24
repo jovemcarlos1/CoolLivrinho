@@ -11,21 +11,21 @@
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group form-group-custom">
-                <label asp-for="Titulo" class="inter-medium control-label"></label>
-                <input asp-for="Titulo" class="inter-medium form-control input-custom" placeholder="Insira um titulo" />
-                <span asp-validation-for="Titulo" class="inter-medium text-danger"></span>
+                <label asp-for="Titulo" class="control-label"></label>
+                <input asp-for="Titulo" class="form-control" placeholder="Insira um titulo" />
+                <span asp-validation-for="Titulo" class="text-danger"></span>
             </div>
             <div class="form-group form-group-custom">
-                <label asp-for="AutorId" class="inter-medium control-label"></label>
-                <select asp-for="AutorId" class="inter-medium form-control input-custom" asp-items="ViewBag.AutorId" placeholder="Selecione um autor" ></select>
+                <label asp-for="AutorId" class="control-label"></label>
+                <select asp-for="AutorId" class="form-control" asp-items="ViewBag.AutorId" placeholder="Selecione um autor" ></select>
             </div>
             <div class="form-group form-group-custom">
-                <label asp-for="CategoriaId" class="inter-medium control-label"></label>
-                <select asp-for="CategoriaId" class="inter-medium form-control input-custom" asp-items="ViewBag.CategoriaId" placeholder="Selecione uma categoria"></select>
+                <label asp-for="CategoriaId" class="control-label"></label>
+                <select asp-for="CategoriaId" class="form-control" asp-items="ViewBag.CategoriaId" placeholder="Selecione uma categoria"></select>
             </div>
             <div class="form-group form-group-custom">
-                <label asp-for="AnoLancamento" class="inter-medium control-label"></label>
-                <input asp-for="AnoLancamento" class="inter-medium form-control input-custom" placeholder="Qual ano foi lançado?" />
+                <label asp-for="AnoLancamento" class="control-label"></label>
+                <input asp-for="AnoLancamento" class="form-control" placeholder="Qual ano foi lançado?" />
                 <span asp-validation-for="AnoLancamento" class="text-danger"></span>
             </div>
             <div class="form-group form-group-custom">

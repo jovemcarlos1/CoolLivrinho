@@ -49,8 +49,8 @@ namespace Bibliotech.Controllers
         // GET: Livro/Create
         public IActionResult Create()
         {
-            ViewData["AutorId"] = new SelectList(_context.Autores, "AutorId", "AutorId");
-            ViewData["CategoriaId"] = new SelectList(_context.Categorias, "CategoriaId", "CategoriaId");
+            ViewData["AutorId"] = new SelectList(_context.Autores, "AutorId", "Nome");
+            ViewData["CategoriaId"] = new SelectList(_context.Categorias, "CategoriaId", "Nome");
             return View();
         }
 
