@@ -22,16 +22,16 @@
                 <span asp-validation-for="Nacionalidade" class="inter-medium text-danger"></span>
             </div>
             <div class="form-group form-group-custom">
-                <input type="submit" value="Adicionar" class="inter-medium btn btn-primary btn-sm btn-custom" />
+                <input type="submit" value="Adicionar" class="inter-medium btn btn-primary btn-sm btn-custom" /> |
+                <a asp-action="Index">voltar à lista</a>
             </div>
         </form>
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">Voltar à lista</a>
-</div>
 
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
 }
