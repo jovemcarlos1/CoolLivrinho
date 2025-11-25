@@ -4,15 +4,16 @@
     ViewData["Title"] = "Autores";
 }
 
-<h1>Autores</h1>
-
 <p>
-    <a asp-action="Create">Criar novo</a>
 </p>
-<table class="table">
+<div class="d-flex justify-content-between align-items-center">
+    <h1 class="inter-bold">Autores</h1>
+    <a asp-action="Create" class="inter-bold btn-sm btn-custom btn-custom-bg-blue">Novo Autor</a>
+</div>
+<table class="table inter-regular">
     <thead>
         <tr>
-            <th>
+            <th class="inter-bold">
                 @Html.DisplayNameFor(model => model.Nome)
             </th>
             <th>
